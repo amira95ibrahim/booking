@@ -1,0 +1,17 @@
+.container-fluid{
+    background: #003580;
+
+}
+.nav{
+    flex-wrap:nowrap!important;
+}
+a{
+    color:white!important;
+
+}
+input{
+    border:2px solid orange;
+    padding: 5px;
+    margin: 3px;
+
+}
