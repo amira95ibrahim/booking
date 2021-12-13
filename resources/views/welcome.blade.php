@@ -20,7 +20,19 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="{{route('stays')}}">Stays</a>
+                  <a class="nav-link active" href="{{route('stays')}}">Stays</a>
+                </div>
+                <div class="navbar-nav">
+                  <a class="nav-link" href="{{route('Flights')}}">Flights</a>
+                </div>
+                <div class="navbar-nav">
+                  <a class="nav-link" href="{{route('Cars')}}">Cars</a>
+                </div>
+                <div class="navbar-nav">
+                  <a class="nav-link" href="{{route('Taxis')}}">Taxis</a>
+                </div>
+                <div class="navbar-nav">
+                  <a class="nav-link" href="{{route('Attractions')}}">Attractions</a>
                 </div>
               </div>
             </div>
@@ -32,7 +44,7 @@
                   <a class="nav-link" href="{{route('login')}}">{{_('login')}}</a>
                  </li>
                @endif
-               @if(Route::ha(('register')))
+               @if(Route::has(('register')))
             <li class="nav-item">
               <a class="nav-link" href="{{route('register')}}">{{_('Register')}}</a>
             </li>
@@ -44,7 +56,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item " href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

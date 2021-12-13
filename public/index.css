@@ -5,8 +5,8 @@
 .nav{
     flex-wrap:nowrap!important;
 }
-a{
-    color:white!important;
+.nav-link{
+    color:white;
 
 }
 input{
@@ -14,4 +14,7 @@ input{
     padding: 5px;
     margin: 3px;
 
+}
+.dropdown-item{
+    color: black!important;
 }
