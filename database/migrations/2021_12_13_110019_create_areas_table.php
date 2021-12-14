@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStaysTable extends Migration
+class CreateAreasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateStaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('stays', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('vendor_id');
-            $table->text('properties');
-            $table->string('images');
+            $table->unsignedBigInteger('city_id');
+            $table->string('lat')->nullable();
+            $table->string('lang')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateStaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stays');
+        Schema::dropIfExists('areas');
     }
 }

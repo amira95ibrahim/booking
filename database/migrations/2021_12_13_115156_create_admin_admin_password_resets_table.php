@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStaysTable extends Migration
+class CreateAdminAdminPasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateStaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('stays', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('vendor_id');
-            $table->text('properties');
-            $table->string('images');
-            $table->timestamps();
+        Schema::create('admin_admin_password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -30,6 +27,6 @@ class CreateStaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stays');
+        Schema::dropIfExists('admin_admin_password_resets');
     }
 }
