@@ -26,7 +26,7 @@ class CreateAdminsTable extends Migration
             $table->string('language', 2)->default('en');
 
             $table->softDeletes();
-            $table->timestamps();
+          
 
             $table->unique(['email', 'deleted_at']);
             $table->timestamps();

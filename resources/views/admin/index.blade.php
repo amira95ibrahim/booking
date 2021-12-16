@@ -65,7 +65,7 @@
         </li>
         <li class="nav-item">
           <a href="" class="nav-link {{Request::is('stays')?'active':''}}">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-hotel"></i>
             <p>
              Stays
              <i class="right fas fa-angle-left"></i>
@@ -73,8 +73,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{url('admin/cars')}}" class="nav-link {{Request::is('cars')?'active':''}}">
-            <i class="nav-icon fas fa-th"></i>
+          <a href="{{url('admin.cars')}}" class="nav-link {{Request::is('cars')?'active':''}}">
+            <i class="nav-icon fas fa-car-side"></i>
             <p>
              cars
              <i class="right fas fa-angle-left"></i>
@@ -82,7 +82,7 @@
           </a>
         </li> <li class="nav-item">
           <a href="" class="nav-link {{Request::is('taxis')?'active':''}}">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-taxi"></i>
             <p>
              taxis
              <i class="right fas fa-angle-left"></i>
@@ -90,7 +90,7 @@
           </a>
         </li> <li class="nav-item">
           <a href="" class="nav-link {{Request::is('flights')?'active':''}}">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-fighter-jet"></i>
             <p>
              flights
              <i class="right fas fa-angle-left"></i>
@@ -98,7 +98,7 @@
           </a>
         </li> <li class="nav-item">
           <a href="" class="nav-link {{Request::is('attractions')?'active':''}}">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-umbrella-beach"></i>
             <p>
              attractions
              <i class="right fas fa-angle-left"></i>
@@ -140,8 +140,8 @@
       <div class="row">
         <div class="col-lg-10">
        <div class="card">
-         hello
-         {{-- @yield(adminContent) --}}
+         hello {{$stay ?? ''}}
+         @yield('adminContent')
        </div>
         </div>
       </div>

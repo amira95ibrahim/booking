@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+use Carbon\Carbon;
 class FillSettingsTable extends Migration
 {
     /**
@@ -174,16 +174,16 @@ class FillSettingsTable extends Migration
     public function up()
     {
         $table = $this->table;
-        DB::transaction(function () use($table) {
-            foreach ($this->settings as $setting){
-                $settingItem = DB::table($table)->where([
-                    'key' => $setting['key']
-                ])->first();
-                if ($settingItem === null) {
-                    DB::table($table)->insert($setting);
-                }
-            }
-        });
+        // DB::transaction(function () use($table) {
+        //     foreach ($this->settings as $setting){
+        //         $settingItem = DB::table($table)->where([
+        //             'key' => $setting['key']
+        //         ])->first();
+        //         if ($settingItem === null) {
+        //             DB::table($table)->insert($setting);
+        //         }
+        //     }
+        // });
     }
 
     /**
@@ -194,18 +194,18 @@ class FillSettingsTable extends Migration
     public function down()
     {
         $table = $this->table;
-        DB::transaction(function () use($table) {
-            foreach ($this->settings as $setting){
-                $settingItem = DB::table($table)->where([
-                    'key' => $setting['key']
-                ])->first();
-                if ($settingItem !== null) {
-                    DB::table($table)->where([
-                        'key' => $setting['key']
-                    ])->delete();
-                }
-            }
-        });
+        // DB::transaction(function () use($table) {
+        //     foreach ($this->settings as $setting){
+        //         $settingItem = DB::table($table)->where([
+        //             'key' => $setting['key']
+        //         ])->first();
+        //         if ($settingItem !== null) {
+        //             DB::table($table)->where([
+        //                 'key' => $setting['key']
+        //             ])->delete();
+        //         }
+        //     }
+        // });
     }
     
 }

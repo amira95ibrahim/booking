@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\create_cars_tables;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -13,7 +13,9 @@ class CarController extends Controller
      */
     public function index()
     {
-        return view('front.cars');
+        $car=new create_cars_tables();
+        dd($car->all());
+        return view('front.cars',compact('car'));
     }
 
     /**
@@ -23,7 +25,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        // return view('');
     }
 
     /**

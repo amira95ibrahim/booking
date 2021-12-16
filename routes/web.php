@@ -31,16 +31,16 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 
 
 // Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
-//     Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-//         Route::prefix('countries')->name('countries/')->group(static function() {
-//             Route::get('/',                                             'CountriesController@index')->name('index');
-//             Route::get('/create',                                       'CountriesController@create')->name('create');
-//             Route::post('/',                                            'CountriesController@store')->name('store');
-//             Route::get('/{country}/edit',                               'CountriesController@edit')->name('edit');
-//             Route::post('/bulk-destroy',                                'CountriesController@bulkDestroy')->name('bulk-destroy');
-//             Route::post('/{country}',                                   'CountriesController@update')->name('update');
-//             Route::delete('/{country}',                                 'CountriesController@destroy')->name('destroy');
-//             Route::get('/export',                                       'CountriesController@export')->name('export');
+//     Route::prefix('admin')->namespace('App\Http\Controllers')->name('admin/')->group(static function() {
+//         Route::prefix('cars')->name('cars/')->group(static function() {
+//             Route::get('/',                                             'CarController@index')->name('index');
+//             Route::get('/create',                                       'CarController@create')->name('create');
+//             // Route::post('/',                                            'CarController@store')->name('store');
+//             // Route::get('/{car}/edit',                               'CarController@edit')->name('edit');
+//             // Route::post('/bulk-destroy',                                'CarController@bulkDestroy')->name('bulk-destroy');
+//             // Route::post('/{car}',                                   'CarController@update')->name('update');
+//             // Route::delete('/{car}',                                 'CarController@destroy')->name('destroy');
+//             // Route::get('/export',                                       'CarController@export')->name('export');
 //         });
 //     });
 // });
